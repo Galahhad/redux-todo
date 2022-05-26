@@ -2,7 +2,6 @@ import { Provider } from "react-redux";
 import { createStore } from "redux";
 import Form from "./components/Form";
 import Header from "./components/Header";
-import Todo from "./components/Todo";
 
 const initialState = {
   todoArray: [],
@@ -49,7 +48,6 @@ function App() {
       <div className="App">
         <Header />
         <Form />
-        <Todo />
       </div>
     </Provider>
   );
