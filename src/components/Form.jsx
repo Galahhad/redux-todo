@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import Todo from './Todo';
 
 const Form = () => {
   const dispatch = useDispatch();
@@ -52,6 +53,7 @@ const Form = () => {
       {textNone && (
         <p style={{ color: "red" }}>Поле ввода не может быть пустым</p>
       )}
+      <Todo setTextNone={setTextNone}/>
     </>
   );
 };
