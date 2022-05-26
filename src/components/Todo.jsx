@@ -3,16 +3,18 @@ import { useSelector, useDispatch } from "react-redux";
 import { BsCheck, BsCheckAll } from "react-icons/bs";
 import { FaTrashAlt } from "react-icons/fa";
 
-const Todo = () => {
+const Todo = ({setTextNone}) => {
   const todoArray = useSelector((state) => state.todoArray);
   const dispatch = useDispatch();
 
   const handleDelete = (id) => {
     dispatch({ type: "delete_todo", payload: id });
+    setTextNone(false);
   };
 
   const handleCheck = (id) => {
     dispatch({ type: "check_todo", payload: id });
+    setTextNone(false);
   };
 
   return (
