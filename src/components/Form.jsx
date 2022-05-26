@@ -23,6 +23,9 @@ const Form = () => {
     if (array.some((item) => item.text.toUpperCase() === text.toUpperCase())) {
       setText("");
       setState(true);
+    }else if (noneText) {
+        setText('');
+        setTextNone(true);
     } else {
       dispatch({ type: "add_todo", payload: text });
       setState(false);
