@@ -24,9 +24,15 @@ const Form = () => {
     if (array.some((item) => item.text.toUpperCase() === text.toUpperCase())) {
       setText("");
       setState(true);
+      setTimeout(() => {
+        setState(false)
+      }, 1000)
     }else if (noneText) {
         setText('');
         setTextNone(true);
+        setTimeout(() => {
+          setTextNone(false)
+        }, 1000)
     } else {
       dispatch({ type: "add_todo", payload: text });
       setState(false);
@@ -36,6 +42,9 @@ const Form = () => {
   const handleBlur = () => {
     if (noneText) {
       setTextNone(true);
+      setTimeout(() => {
+        setTextNone(false)
+      }, 1000)
     } else {
       setTextNone(false);
     }
