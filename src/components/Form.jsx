@@ -53,7 +53,7 @@ const Form = () => {
       {textNone && (
         <p style={{ color: "red" }}>Поле ввода не может быть пустым</p>
       )}
-      <Todo setTextNone={setTextNone}/>
+      <Todo setTextNone={setTextNone} setState={setState}/>
     </>
   );
 };
