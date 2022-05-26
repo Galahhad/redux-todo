@@ -44,7 +44,7 @@ const Form = () => {
   return (
     <>
       <form onSubmit={handleSubmit} className="form">
-        <input value={text} onChange={handleText} onBlur={handleBlur} />
+        <input value={text} onChange={handleText} onBlur={handleBlur} placeholder="Введите текст"/>
         <button disabled={noneText} type="submit">
           Add
         </button>
